@@ -61,9 +61,8 @@ class Episode extends Component {
         })
       })
 
-      // set's the duration TODO: find a better way
+      // set's the duration onLoad
       this.audioRef.currentTime = 0.1
-
 
       document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -175,13 +174,11 @@ class Episode extends Component {
               episode && (
                 <div className="EpisodeInfo">
                   <h2>{episode.name}</h2>
-
                   <audio
                     ref={(input) => this.audioRef = input}
                     src={`${process.env.REACT_APP_PODBLASTER_SRV}${episode.audio}`}
                     style={{ display: 'none' }}
                   />
-
                   <progress
                     value={(duration !== 0) ? currentTime/duration : 0}
                     onClick={this.handleProgressClicked}
@@ -190,7 +187,6 @@ class Episode extends Component {
                   />
                   <p className="EpisodeTimer">{this.displayTime(currentTime)} / {this.displayTime(duration)}</p>
                   <div className="EpisodeActions">
-                    {/* Slider */}
                     <div className="EpisodeButtons">
                       <div
                         className="SeekBackButton Button"
