@@ -46,6 +46,8 @@ class MarkerHandler extends Component {
             content={marker.content}
           />
         )
+      default:
+        return null
     }
   }
 
@@ -62,8 +64,6 @@ class MarkerHandler extends Component {
         }
       })
     }
-
-    console.log(markers)
 
     return (
       <div className="MarkerHandler">

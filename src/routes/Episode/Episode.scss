@@ -19,10 +19,8 @@
 
   .ContentHeader {
     align-items: center;
-    background: #FFF;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .125);
     display: flex;
-    height: 48px;
+    height: 80px;
     left: 0;
     padding: 0 24px;
     position: absolute;
@@ -44,16 +42,16 @@
       color: #000;
       cursor: pointer;
       display: flex;
-      font-size: 14px;
+      font-size: 18px;
     
 
       .IconBack {
         background-image: url('https://img.icons8.com/ios-glyphs/30/000000/arrow-pointing-left.png');
         background-repeat: no-repeat;
         background-size: contain;
-        margin-right: 12px;
-        height: 24px;
-        width: 24px;
+        margin-right: 20px;
+        height: 28px;
+        width: 28px;
       }
     }
   }

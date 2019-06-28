@@ -6,6 +6,9 @@ import Error from 'components/Error'
 import MarkerHandler from './components/MarkerHandler'
 import './Episode.scss'
 
+const SPACE_KEY = 32
+const ENTER_KEY = 13
+
 class Episode extends Component {
   constructor(props) {
     super(props)
@@ -22,6 +25,7 @@ class Episode extends Component {
     this.audioRef = React.createRef()
     this.progressBar = React.createRef()
 
+    this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleProgressClicked = this.handleProgressClicked.bind(this)
     this.togglePlayPause = this.togglePlayPause.bind(this)
     this.handleSeekBack = this.handleSeekBack.bind(this)
@@ -59,10 +63,27 @@ class Episode extends Component {
 
       // set's the duration TODO: find a better way
       this.audioRef.currentTime = 0.1
+
+
+      document.addEventListener("keydown", this.handleKeyDown)
   }
 
   componentWillUnmount() {
     this.audioRef.removeEventListener("timeupdate", () => {})
+    document.removeEventListener("keydown", this.handleKeyDown)
+  }
+
+  handleKeyDown(event) {
+    switch( event.keyCode ) {
+        case SPACE_KEY:
+            this.togglePlayPause();
+            break;
+        case ENTER_KEY:
+            this.togglePlayPause();
+            break;
+        default: 
+            break;
+    }
   }
 
   handleProgressClicked(e) {

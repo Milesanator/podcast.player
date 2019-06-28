@@ -38,8 +38,6 @@ class Episodes extends Component {
 
   render() {
     const { loading, error, episodes } = this.state
-
-    console.log(episodes)
     let episodeRows = []
     
     if (episodes && episodes.length > 0) {
