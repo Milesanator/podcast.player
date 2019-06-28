@@ -1,0 +1,44 @@
+.Episodes {
+  background: #EEE;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 72px 24px 0;
+  position: relative;
+  width: 100%;
+
+  &[data-loading="false"] {
+    .LoadingSpinner {
+      display: none;
+    }
+
+    .EpisodesContent {
+      display: flex;
+    }
+  }
+
+  .EpisodesContent {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    .EpisodeList {
+      .EpisodeRow {
+        border-radius: 4px;
+        display: flex;
+
+        &:nth-child(odd) {
+          background-color: rgba(32,156,238, 0.35);
+        }
+
+        a {
+          color: #000;
+          cursor: pointer;
+          padding: 16px;
+          text-decoration: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
