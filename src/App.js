@@ -10,7 +10,7 @@ require('dotenv').config()
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Switch>
           <Route exact path="/" render={() => 
             <Redirect to="/episodes"/>

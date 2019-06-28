@@ -129,8 +129,6 @@ class Episode extends Component {
       playing
     } = this.state
 
-    console.log(episode)
-
     return (
       <div className="Episode" data-loading={loading}>
         <div className="ContentHeader">
@@ -164,7 +162,7 @@ class Episode extends Component {
                   />
 
                   <progress
-                    value={currentTime/duration}
+                    value={(duration !== 0) ? currentTime/duration : 0}
                     onClick={this.handleProgressClicked}
                     max="1"
                     ref={(bar) => this.progressBar = bar}

@@ -1,8 +1,8 @@
 .Episode {
   background: #EEE;
   display: flex;
+  height: 100%;
   justify-content: center;
-  min-height: 100vh;
   padding: 72px 24px 24px;
   position: relative;
   width: 100%;
@@ -39,10 +39,6 @@
       margin-bottom: 16px;
     }
 
-    a {
-      text-decoration: none;
-    }
-
     .BackButton {
       align-items: center;
       color: #000;
@@ -67,6 +63,10 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
+
+    .EpisodeMarkers {
+      height: 40vh;
+    }
 
     .EpisodeInfo {
       padding: 40px;

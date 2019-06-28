@@ -33,3 +33,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
   - media query mixin
 
 - Use an actual icon package
+- Create mobile styles
