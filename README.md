@@ -38,3 +38,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - Use an actual icon package
 - Create mobile styles
+- Full test coverage of components
+- End-to-end testing
+  - In an ideal project I would write at least 1 automated test, triggering core functionality e.g Mock endpoint returns a mock list of podcasts, that can be clicked on, play and trigger the correct markers at the expected timestamps
